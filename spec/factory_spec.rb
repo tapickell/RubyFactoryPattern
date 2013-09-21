@@ -3,7 +3,7 @@ require 'factory'
 describe ItemFactory do
   describe 'work_item' do
     it 'returns a new WorkItem object' do
-      work_item = ItemFactory.work_item({:type => 'destroy', :data => User.new('Test User', '42')})
+      work_item = ItemFactory.work_item({:type => 'destroy'})
       work_item.class.should == WorkItem
     end
 
@@ -24,7 +24,7 @@ describe ItemFactory do
 
   describe 'request_item' do
     it 'returns a new RequestItem object' do
-      request_item = ItemFactory.request_item({:request => Request.new('request data'), :type => 'destroy', :data => User.new('Test User', '42')})
+      request_item = ItemFactory.request_item({:type => 'destroy'})
       request_item.class.should == RequestItem
     end
 
